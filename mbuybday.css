@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace, sans-serif;            
+
+    background: linear-gradient(
+        135deg,
+        #ff6b9d,
+        #ffabc3,
+        #ffebb5,
+        #b9f2ff,
+        #fcccf6,
+        #a7cefd
+    );
+}
+
+.letter {
+    background: #ffd9d9e0;
+    padding: 36px 42px;
+    max-width: 520px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+h1 {
+    color: #ff7aa0;
+    margin-bottom: 10px;
+}
+
+.date {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #463a3a;
+}
+
+.signature {
+    margin-top: 30px;
+    font-weight: bold;
+    color: #e68dab;
+}
+
+button {
+    margin-top: 25px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #fade60, #f2fe98, #fade60);
+    color: rgb(75, 65, 65);
+    font-size: 14px;
+    cursor: pointer;
+    font-family: monospace, sans-serif;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.cake {
+    margin: 85px auto;
+    position: relative;
+    width: 120px;
+    margin-top: 30px auto;
+}
+
+.layer {
+    height: 28px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+}
+    .layer.top { background: #ff9ff3; }
+    .layer.middle { background: #feca57; }
+    .layer.bottom { background: #ff6b9d; }
+
+.candle {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 28px;
+    background: repeating-linear-gradient(
+        45deg,
+    #ffffff,
+    #ffffff 4px,
+    #ff6b9d 4px,
+    #ff6b9d 8px
+    );
+    border-radius: 4px;
+}
+
+.flame {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 14px;
+    background: radial-gradient(circle, #fff 20%, #feca57 60%, #ff9f43);
+    border-radius: 50% 50% 50% 50%;
+    animation: flicker 0.6s infinite alternate;
+}
+
+    @keyframes flicker {
+        0% { transform: translateX(-50%) scale(1); opacity: 0.9; }
+        100% { transform: translateX(-50%) scale(1.1); opacity: 1; }
+    }
